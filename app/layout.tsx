@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -8,15 +8,22 @@ const inter = Inter({
   display: "swap",
 });
 
+const instrument = Instrument_Serif({
+  subsets: ["latin"],
+  variable: "--font-instrument",
+  weight: "400",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
-  title: "aiCoWork | Seu agente pessoal de IA no WhatsApp",
+  title: "Squad.io by CruzTech | Time de TI no WhatsApp",
   description:
-    "Resolva qualquer coisa pelo WhatsApp com agentes de IA. Faca reservas, pesquise, compre e automatize sua rotina apenas conversando.",
+    "Engenheiros de software seniores + IA resolvendo bugs, features, deploys e seguranca direto no WhatsApp. Cada entrega revisada por um humano.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="pt-BR" className={inter.variable}>
+    <html lang="pt-BR" className={`${inter.variable} ${instrument.variable}`}>
       <body className="font-sans">{children}</body>
     </html>
   );

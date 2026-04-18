@@ -1,9 +1,7 @@
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
-import { LogosRail } from "@/components/LogosRail";
-import { PainSection } from "@/components/PainSection";
-import { HowItWorks } from "@/components/HowItWorks";
-import { ServicesGrid } from "@/components/ServicesGrid";
+import { PowerSection } from "@/components/PowerSection";
+import { UseCases } from "@/components/UseCases";
 import { HumanAIDiff } from "@/components/HumanAIDiff";
 import { CaseStudies } from "@/components/CaseStudies";
 import { StatsSection } from "@/components/StatsSection";
@@ -17,24 +15,18 @@ export default function HomePage() {
   return (
     <>
       <Header />
-      <main className="w-full pt-16 overflow-x-hidden">
+      <main className="w-full overflow-x-hidden">
         <Hero />
-        <LogosRail />
-        <PainSection />
-        <HowItWorks />
-        <section id="servicos">
-          <ServicesGrid />
+        <section id="como-funciona">
+          <PowerSection />
         </section>
+        <UseCases />
         <HumanAIDiff />
-        <section id="cases">
-          <CaseStudies />
-        </section>
+        <CaseStudies />
         <StatsSection />
         <Pricing />
         <Testimonials />
-        <section id="faq">
-          <FAQ />
-        </section>
+        <FAQ />
         <CtaFinal />
       </main>
       <Footer />

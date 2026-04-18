@@ -10,115 +10,123 @@ import {
 
 const CASES = [
   {
+    swatch: "swatch-peach",
     company: "Loja Verde",
     industry: "E-commerce de organicos",
     icon: Storefront,
     problem: "Checkout derrubando 1 em cada 3 pedidos no Safari iOS.",
-    solution: "Bug de compatibilidade Safari corrigido + testes de navegador adicionados.",
+    solution: "Bug de compatibilidade Safari corrigido + testes cross-browser.",
     stat: { time: "2h20", saved: "R$ 6.500" },
-    reviewer: "Almir Cruz (senior)",
+    reviewer: "Almir Cruz",
   },
   {
+    swatch: "swatch-sky",
     company: "Fretella",
     industry: "Startup de logistica",
     icon: Package,
-    problem: "Integracao com API dos Correios nao carregava rastreio em 40% dos casos.",
-    solution: "Retry com backoff exponencial + cache de respostas + dashboard de status.",
+    problem: "Integracao com API dos Correios caindo em 40% dos casos.",
+    solution: "Retry com backoff + cache + dashboard de status em tempo real.",
     stat: { time: "1 dia", saved: "R$ 14.000" },
-    reviewer: "Rafael Tavares (senior)",
+    reviewer: "Rafael Tavares",
   },
   {
+    swatch: "swatch-butter",
     company: "PayKey",
     industry: "Fintech B2B",
     icon: CreditCard,
-    problem: "Relatorio mensal de conciliacao levava 8h manual, bugando planilha.",
-    solution: "Automacao completa em Node + exportacao PDF/CSV com auditoria.",
+    problem: "Relatorio mensal de conciliacao levava 8h manual com erros.",
+    solution: "Automacao completa em Node + export PDF/CSV com auditoria.",
     stat: { time: "3 dias", saved: "40h/mes" },
-    reviewer: "Juliana M. (senior)",
+    reviewer: "Juliana Moraes",
   },
 ];
 
 export function CaseStudies() {
   return (
-    <section className="max-w-[1240px] mx-auto px-6 py-24 relative z-10">
-      <div className="text-center max-w-[700px] mx-auto mb-16">
-        <div className="inline-block text-[13px] font-semibold tracking-widest text-accent-600 uppercase mb-3">
-          Cases reais
+    <section id="cases" className="py-28 bg-canvas">
+      <div className="max-w-[1240px] mx-auto px-6">
+        <div className="mb-14">
+          <div className="text-[13px] font-medium text-ink-muted mb-4">Cases reais</div>
+          <h2 className="text-h2 text-black max-w-[760px] text-balance">
+            O que a gente ja entregou{" "}
+            <span className="font-display italic text-ink-subtle">este trimestre.</span>
+          </h2>
         </div>
-        <h2 className="text-h2 text-black text-balance">
-          Resultados que ja entregamos
-        </h2>
-        <p className="text-body text-ink-muted mt-5 max-w-[560px] mx-auto">
-          Problemas reais, clientes reais, entregues com revisao de engenheiro senior.
-        </p>
-      </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {CASES.map((c) => {
-          const Icon = c.icon;
-          return (
-            <article
-              key={c.company}
-              className="group relative bg-white border border-gray-100 rounded-[24px] p-7 hover:border-accent/30 hover:shadow-[0_20px_50px_rgba(139,92,246,0.08)] transition-all flex flex-col"
-            >
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-11 h-11 rounded-xl bg-accent-50 text-accent-600 flex items-center justify-center">
-                  <Icon weight="duotone" size={22} />
-                </div>
-                <div>
-                  <div className="text-[15px] font-semibold text-black">{c.company}</div>
-                  <div className="text-[12px] text-gray-500">{c.industry}</div>
-                </div>
-              </div>
-
-              <div className="mb-4">
-                <div className="text-[11px] font-semibold tracking-widest text-red-500 uppercase mb-1.5">
-                  Problema
-                </div>
-                <p className="text-[14px] text-black leading-relaxed">{c.problem}</p>
-              </div>
-
-              <div className="mb-6">
-                <div className="text-[11px] font-semibold tracking-widest text-wa uppercase mb-1.5">
-                  Entregamos
-                </div>
-                <p className="text-[14px] text-ink-muted leading-relaxed">{c.solution}</p>
-              </div>
-
-              {/* Stat destaque */}
-              <div className="mt-auto bg-black rounded-2xl p-5 text-white">
-                <div className="grid grid-cols-2 gap-4 mb-3">
-                  <div>
-                    <div className="flex items-center gap-1.5 text-[11px] font-medium uppercase tracking-wider text-gray-400 mb-1">
-                      <Clock size={11} /> Entregue em
-                    </div>
-                    <div className="text-[22px] font-semibold leading-none">{c.stat.time}</div>
-                  </div>
-                  <div>
-                    <div className="flex items-center gap-1.5 text-[11px] font-medium uppercase tracking-wider text-gray-400 mb-1">
-                      <CurrencyCircleDollar size={11} /> Economia
-                    </div>
-                    <div className="text-[22px] font-semibold leading-none text-wa">
-                      {c.stat.saved}
-                    </div>
-                  </div>
-                </div>
-                <div className="pt-3 border-t border-white/10 flex items-center gap-2 text-[11px] text-gray-300">
-                  <CheckCircle weight="fill" size={12} className="text-wa" />
-                  Revisado por <span className="text-white font-medium">{c.reviewer}</span>
-                </div>
-              </div>
-
-              <a
-                href="#"
-                className="mt-5 inline-flex items-center gap-1.5 text-[13px] font-medium text-accent-600 hover:text-accent-700 transition-colors"
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {CASES.map((c) => {
+            const Icon = c.icon;
+            return (
+              <article
+                key={c.company}
+                className="group relative flex flex-col"
               >
-                Ver case completo
-                <ArrowRight size={12} />
-              </a>
-            </article>
-          );
-        })}
+                {/* Watercolor header card */}
+                <div
+                  className={`${c.swatch} relative rounded-[24px] h-[180px] overflow-hidden mb-6 transition-transform duration-500 group-hover:scale-[1.02]`}
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/30 via-transparent to-black/5" />
+
+                  {/* Company pill */}
+                  <div className="absolute top-5 left-5 concept-pill bg-white/90">
+                    <div className="w-4 h-4 rounded-md bg-black/5 flex items-center justify-center">
+                      <Icon weight="fill" size={9} className="text-ink-subtle" />
+                    </div>
+                    <span className="text-ink-subtle font-semibold">{c.company}</span>
+                  </div>
+
+                  {/* Center big stat */}
+                  <div className="absolute inset-x-0 bottom-0 p-6">
+                    <div className="bg-black rounded-2xl p-4 shadow-float">
+                      <div className="grid grid-cols-2 gap-3">
+                        <div>
+                          <div className="flex items-center gap-1 text-[9px] font-medium uppercase tracking-wider text-white/50 mb-1">
+                            <Clock size={9} /> Tempo
+                          </div>
+                          <div className="text-[22px] font-semibold text-white leading-none tracking-tight">
+                            {c.stat.time}
+                          </div>
+                        </div>
+                        <div>
+                          <div className="flex items-center gap-1 text-[9px] font-medium uppercase tracking-wider text-white/50 mb-1">
+                            <CurrencyCircleDollar size={9} /> Economia
+                          </div>
+                          <div className="text-[22px] font-semibold text-wa leading-none tracking-tight">
+                            {c.stat.saved}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Text body */}
+                <div className="flex flex-col flex-1">
+                  <div className="text-[11px] font-medium text-ink-muted uppercase tracking-wider mb-3">
+                    {c.industry}
+                  </div>
+                  <p className="text-[15px] text-black font-medium leading-snug mb-3">
+                    {c.problem}
+                  </p>
+                  <p className="text-[14px] text-ink-muted leading-relaxed mb-5">{c.solution}</p>
+
+                  <div className="mt-auto pt-4 border-t border-black/5 flex items-center justify-between">
+                    <div className="flex items-center gap-2 text-[12px] text-ink-muted">
+                      <CheckCircle weight="fill" size={12} className="text-wa" />
+                      Revisado por <span className="text-black font-medium">{c.reviewer}</span>
+                    </div>
+                    <a
+                      href="#"
+                      className="inline-flex items-center gap-1 text-[12px] font-medium text-ink-subtle hover:text-accent-600 transition-colors"
+                    >
+                      Ver case <ArrowRight size={11} />
+                    </a>
+                  </div>
+                </div>
+              </article>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

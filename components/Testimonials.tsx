@@ -1,92 +1,89 @@
-import { Quotes } from "@phosphor-icons/react/dist/ssr";
-
 const TESTIMONIALS = [
   {
+    swatch: "from-aurora-peach to-aurora-coral",
     quote:
-      "O time do Squad resolveu em 2h um bug que meu freelancer travou por uma semana. E o melhor: eu conversei tudo pelo WhatsApp, sem abrir ticket.",
+      "Em 2h resolveram um bug que meu freelancer travou por uma semana. E tudo pelo WhatsApp, sem ticket, sem reuniao.",
     name: "Carla Mendes",
-    role: "CEO",
-    company: "Loja Verde",
-    avatar: "https://i.pravatar.cc/120?img=47",
+    role: "CEO, Loja Verde",
+    initials: "CM",
   },
   {
+    swatch: "from-aurora-lavender to-accent/50",
     quote:
-      "Cancelamos um freela de R$ 8k que ia levar um mes. Squad.io entregou a feature inteira em 3 dias por uma fracao do preco, com codigo MELHOR.",
+      "Cancelei um freela de R$ 8k que ia levar um mes. Squad entregou em 3 dias por menos da metade. Com codigo MELHOR.",
     name: "Ricardo Almeida",
-    role: "Fundador",
-    company: "Fretella",
-    avatar: "https://i.pravatar.cc/120?img=68",
+    role: "Fundador, Fretella",
+    initials: "RA",
   },
   {
+    swatch: "from-aurora-mint to-aurora-seafoam",
     quote:
-      "Eu nao sou tecnico. Antes dependia do meu cunhado dev pra tudo. Agora mando audio no WhatsApp, recebo explicacao em linguagem humana e aprovo.",
+      "Nao sou tecnica. Dependia do meu cunhado dev. Hoje mando audio e recebo resumo em linguagem humana. Mudou minha operacao.",
     name: "Tatiana R.",
-    role: "Diretora",
-    company: "Pet Express",
-    avatar: "https://i.pravatar.cc/120?img=5",
+    role: "Diretora, Pet Express",
+    initials: "TR",
   },
   {
+    swatch: "from-aurora-sky to-aurora-lavender",
     quote:
-      "A parte de engenheiro senior revisando foi decisiva. Ja tive prejuizo com IA sem supervisao. Aqui tenho tranquilidade que um humano validou antes.",
+      "A parte de engenheiro senior revisando foi decisiva. Ja tive prejuizo com IA sem supervisao. Aqui tenho paz.",
     name: "Bruno Vieira",
-    role: "COO",
-    company: "PayKey",
-    avatar: "https://i.pravatar.cc/120?img=12",
+    role: "COO, PayKey",
+    initials: "BV",
   },
   {
+    swatch: "from-aurora-butter to-aurora-peach",
     quote:
-      "Descobrimos 2 vulnerabilidades serias que nosso dev interno nao tinha visto. A analise de seguranca trimestral vale o plano todo.",
+      "Descobrimos 2 vulnerabilidades serias que nosso dev interno nao viu. A analise trimestral paga o plano inteiro.",
     name: "Felipe Dantas",
-    role: "CTO",
-    company: "Agro Digital",
-    avatar: "https://i.pravatar.cc/120?img=33",
+    role: "CTO, Agro Digital",
+    initials: "FD",
   },
   {
+    swatch: "from-aurora-blush to-aurora-lilac",
     quote:
-      "A velocidade de resposta e absurda. Mandei a tarefa 22h de uma quinta, 8h da sexta o PR estava na minha mesa revisado e pronto pra deploy.",
+      "Velocidade absurda. Mandei 22h da quinta, 8h da sexta o PR estava revisado e pronto pra deploy.",
     name: "Ana Paula L.",
-    role: "Head de Produto",
-    company: "RepoBrasil",
-    avatar: "https://i.pravatar.cc/120?img=11",
+    role: "Head de Produto, RepoBrasil",
+    initials: "AP",
   },
 ];
 
 export function Testimonials() {
   return (
-    <section className="max-w-[1240px] mx-auto px-6 py-24 relative z-10 border-t border-gray-100">
-      <div className="text-center max-w-[700px] mx-auto mb-16">
-        <div className="inline-block text-[13px] font-semibold tracking-widest text-accent-600 uppercase mb-3">
-          Depoimentos
+    <section className="py-28 bg-canvas">
+      <div className="max-w-[1240px] mx-auto px-6">
+        <div className="mb-14 max-w-[720px]">
+          <div className="text-[13px] font-medium text-ink-muted mb-4">Depoimentos</div>
+          <h2 className="text-h2 text-black text-balance">
+            O que nossos clientes{" "}
+            <span className="font-display italic text-ink-subtle">dizem por ai.</span>
+          </h2>
         </div>
-        <h2 className="text-h2 text-black text-balance">
-          O que nossos clientes dizem
-        </h2>
-      </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-        {TESTIMONIALS.map((t) => (
-          <div
-            key={t.name}
-            className="bg-[#F7F7F8] rounded-[24px] p-8 flex flex-col justify-between gap-8 hover:bg-white hover:shadow-soft hover:border hover:border-gray-100 transition-all"
-          >
-            <div>
-              <Quotes weight="fill" size={22} className="text-accent-400 mb-4" />
-              <p className="text-[15px] leading-[1.65] text-black">&ldquo;{t.quote}&rdquo;</p>
-            </div>
-            <div className="flex items-center gap-3">
-              <div className="w-11 h-11 rounded-full bg-gray-200 overflow-hidden shrink-0">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={t.avatar} alt={t.name} className="w-full h-full grayscale opacity-90" />
-              </div>
-              <div>
-                <p className="text-[14px] font-semibold text-black">{t.name}</p>
-                <p className="text-[12px] text-ink-muted">
-                  {t.role} &middot; {t.company}
-                </p>
-              </div>
-            </div>
-          </div>
-        ))}
+        <div className="columns-1 md:columns-2 lg:columns-3 gap-6 [column-fill:_balance]">
+          {TESTIMONIALS.map((t) => (
+            <figure
+              key={t.name}
+              className="break-inside-avoid mb-6 bg-white rounded-[24px] p-7 border border-black/5 hover:border-black/10 hover:shadow-soft transition-all group"
+            >
+              <blockquote className="text-[16px] leading-[1.55] text-black font-medium mb-6 text-balance">
+                &ldquo;{t.quote}&rdquo;
+              </blockquote>
+              <figcaption className="flex items-center gap-3 pt-5 border-t border-black/5">
+                <div
+                  className={`w-10 h-10 rounded-full bg-gradient-to-br ${t.swatch} flex items-center justify-center text-white text-[12px] font-bold shadow-sm`}
+                >
+                  {t.initials}
+                </div>
+                <div>
+                  <div className="text-[14px] font-semibold text-black">{t.name}</div>
+                  <div className="text-[12px] text-ink-muted">{t.role}</div>
+                </div>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
       </div>
     </section>
   );

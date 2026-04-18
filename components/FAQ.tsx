@@ -1,16 +1,16 @@
 "use client";
 
 import { useState } from "react";
-import { Plus, Minus } from "@phosphor-icons/react/dist/ssr";
+import { Plus } from "@phosphor-icons/react/dist/ssr";
 
 const FAQS = [
   {
     q: "Como funciona o acesso ao meu repositorio?",
-    a: "Voce instala nosso GitHub App (ou GitLab/Bitbucket) com permissao apenas no repositorio que voce escolher. O agente trabalha em uma branch isolada, abre PR, e voce aprova antes de merge. Nunca temos acesso direto a producao.",
+    a: "Voce instala nosso GitHub App (ou GitLab/Bitbucket) com permissao apenas no repositorio que escolher. O agente trabalha em branch isolada, abre PR, e voce aprova antes de merge. Nunca temos acesso direto a producao.",
   },
   {
     q: "E se o agente quebrar algo em producao?",
-    a: "Nao deixamos chegar la. Todo PR passa por 3 camadas: testes automatizados, revisao por engenheiro senior da CruzTech, e sua aprovacao final. Alem disso, fazemos deploy em staging antes de producao. Se mesmo assim algo quebrar, temos rollback automatico.",
+    a: "Nao deixamos chegar la. Todo PR passa por 3 camadas: testes automatizados, revisao por engenheiro senior, e sua aprovacao final. Deploy em staging antes de producao, com rollback automatico se algo falhar.",
   },
   {
     q: "Quem sao os engenheiros que revisam o codigo?",
@@ -18,11 +18,11 @@ const FAQS = [
   },
   {
     q: "Voces assinam NDA e tem contrato formal?",
-    a: "Sim. Contrato assinado digitalmente, NDA padrao ou customizado, e compromissos de LGPD. Seus dados sensiveis nunca sao usados para treinar modelos, e podemos isolar em sandbox com zero retention se necessario.",
+    a: "Sim. Contrato assinado digitalmente, NDA padrao ou customizado, e compromissos de LGPD. Dados sensiveis nunca sao usados para treinar modelos, e podemos isolar em sandbox com zero retention.",
   },
   {
     q: "Quais linguagens e stacks voces suportam?",
-    a: "Node.js, Next.js, React, Vue, Laravel, PHP, Python (Django/FastAPI), Ruby on Rails, TypeScript. Infra: Vercel, AWS, Google Cloud, Cloudflare, Supabase. Se tiver algo especifico, pergunte no WhatsApp antes de contratar.",
+    a: "Node.js, Next.js, React, Vue, Laravel, PHP, Python (Django/FastAPI), Ruby on Rails, TypeScript. Infra: Vercel, AWS, Google Cloud, Cloudflare, Supabase. Se tiver algo especifico, pergunte antes de contratar.",
   },
   {
     q: "Posso cancelar quando quiser?",
@@ -30,7 +30,7 @@ const FAQS = [
   },
   {
     q: "Qual a diferenca pra contratar um freelancer?",
-    a: "Freelancer: disponibilidade incerta, codigo sem revisao, preco por projeto, risco de sumir. Squad.io: time de engenheiros seniores ativo 24/7, IA acelerando entrega, revisao garantida em todo PR, preco previsivel, contrato formal com CruzTech.",
+    a: "Freelancer: disponibilidade incerta, codigo sem revisao, preco por projeto, risco de sumir. Squad.io: time de engenheiros seniores ativo, IA acelerando entrega, revisao garantida em todo PR, preco previsivel, contrato formal com CruzTech.",
   },
   {
     q: "E se minha tarefa for muito complexa pra um plano mensal?",
@@ -42,49 +42,74 @@ export function FAQ() {
   const [openIdx, setOpenIdx] = useState<number | null>(0);
 
   return (
-    <section className="max-w-[920px] mx-auto px-6 py-24 relative z-10">
-      <div className="text-center max-w-[700px] mx-auto mb-16">
-        <div className="inline-block text-[13px] font-semibold tracking-widest text-accent-600 uppercase mb-3">
-          Perguntas frequentes
-        </div>
-        <h2 className="text-h2 text-black text-balance">
-          Sobre como a gente trabalha
-        </h2>
-      </div>
-
-      <div className="space-y-3">
-        {FAQS.map((item, idx) => {
-          const isOpen = openIdx === idx;
-          return (
-            <div
-              key={item.q}
-              className={`rounded-2xl border transition-all ${
-                isOpen
-                  ? "bg-white border-accent/30 shadow-[0_8px_30px_rgba(139,92,246,0.08)]"
-                  : "bg-white border-gray-100 hover:border-gray-200"
-              }`}
-            >
-              <button
-                onClick={() => setOpenIdx(isOpen ? null : idx)}
-                className="w-full flex items-center justify-between gap-6 p-6 text-left"
-              >
-                <span className="text-[16px] font-semibold text-black">{item.q}</span>
-                <div
-                  className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-all ${
-                    isOpen ? "bg-accent text-white" : "bg-gray-100 text-gray-600"
-                  }`}
+    <section id="faq" className="py-28 bg-canvas">
+      <div className="max-w-[1240px] mx-auto px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          <div className="lg:col-span-4">
+            <div className="lg:sticky lg:top-32">
+              <div className="text-[13px] font-medium text-ink-muted mb-4">FAQ</div>
+              <h2 className="text-h2 text-black text-balance mb-6">
+                Sobre como{" "}
+                <span className="font-display italic text-ink-subtle">a gente trabalha.</span>
+              </h2>
+              <p className="text-[15px] text-ink-muted leading-relaxed">
+                Duvida nao respondida?{" "}
+                <a
+                  href="https://wa.me/5500000000000"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-wa-700 font-medium hover:text-wa-900 transition-colors"
                 >
-                  {isOpen ? <Minus weight="bold" size={14} /> : <Plus weight="bold" size={14} />}
-                </div>
-              </button>
-              {isOpen && (
-                <div className="px-6 pb-6 -mt-2">
-                  <p className="text-[15px] text-ink-muted leading-relaxed">{item.a}</p>
-                </div>
-              )}
+                  Pergunta no WhatsApp &rarr;
+                </a>
+              </p>
             </div>
-          );
-        })}
+          </div>
+
+          <div className="lg:col-span-8">
+            <div className="divide-y divide-black/[0.08]">
+              {FAQS.map((item, idx) => {
+                const isOpen = openIdx === idx;
+                return (
+                  <div key={item.q} className="py-5">
+                    <button
+                      onClick={() => setOpenIdx(isOpen ? null : idx)}
+                      className="w-full flex items-start justify-between gap-6 text-left group"
+                    >
+                      <span
+                        className={`text-[17px] font-medium leading-tight transition-colors ${
+                          isOpen ? "text-black" : "text-ink-subtle group-hover:text-black"
+                        }`}
+                      >
+                        {item.q}
+                      </span>
+                      <div
+                        className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 mt-0.5 transition-all ${
+                          isOpen
+                            ? "bg-black text-white rotate-45"
+                            : "bg-black/[0.04] text-ink-subtle group-hover:bg-black/[0.08]"
+                        }`}
+                      >
+                        <Plus weight="bold" size={12} />
+                      </div>
+                    </button>
+                    <div
+                      className={`grid transition-all duration-300 ease-out ${
+                        isOpen ? "grid-rows-[1fr] opacity-100 mt-4" : "grid-rows-[0fr] opacity-0"
+                      }`}
+                    >
+                      <div className="overflow-hidden">
+                        <p className="text-[15px] text-ink-muted leading-[1.65] max-w-[640px] pr-10">
+                          {item.a}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
