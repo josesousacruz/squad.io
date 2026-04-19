@@ -32,7 +32,7 @@ function PillSenior() {
       <div className="w-4 h-4 rounded-full bg-gradient-to-br from-accent to-indigo-600 flex items-center justify-center">
         <User weight="fill" size={8} className="text-white" />
       </div>
-      <span className="text-ink-subtle">Revisado por Almir C.</span>
+      <span className="text-ink-subtle">Validado por Almir C.</span>
       <Check weight="bold" size={11} className="text-wa" />
     </div>
   );
@@ -44,7 +44,7 @@ function PillNoInfra() {
       <div className="w-4 h-4 rounded-full border border-black/10 bg-white flex items-center justify-center">
         <Sparkle weight="fill" size={8} className="text-wa" />
       </div>
-      <span className="text-ink-subtle">Sem setup, sem config</span>
+      <span className="text-ink-subtle">Sem setup, sem configuração</span>
     </div>
   );
 }
@@ -98,33 +98,33 @@ type Feature = {
 const FEATURES: Feature[] = [
   {
     pill: <PillSpeed />,
-    title: "Velocidade de IA",
-    desc: "O agente le todo o repositorio, identifica a causa, corrige e abre PR em minutos. O que levava dias agora acontece enquanto voce toma um cafe.",
+    title: "Execução autônoma real",
+    desc: "Super agentes leem o repositório, quebram o problema, implementam a solução e preparam o PR em minutos. Não é atendimento automático; é execução técnica de ponta a ponta.",
   },
   {
     pill: <PillSenior />,
-    title: "Revisao de engenheiro senior",
-    desc: "Cada linha de codigo passa pelos olhos de um engenheiro CruzTech com +8 anos de experiencia. O nome dele assina a entrega.",
+    title: "Validação de engenheiro sênior",
+    desc: "Antes de qualquer entrega sair, um engenheiro sênior da CruzTech revisa arquitetura, segurança, edge cases e aderência ao seu padrão de código.",
   },
   {
     pill: <PillNoInfra />,
-    title: "Zero infraestrutura",
-    desc: "Nao instale nada, nao configure nada. Mande a tarefa por mensagem e receba o resultado. Sem painel complicado, sem curva de aprendizado.",
+    title: "Operação sem atrito",
+    desc: "Você não precisa montar squad, contratar freela ou abrir ticket em ferramenta nova. Manda a demanda por mensagem e recebe execução, contexto e próximo passo.",
   },
   {
     pill: <PillIntegrations />,
-    title: "Onde voce ja esta",
-    desc: "WhatsApp, Telegram, GitHub, Slack, e-mail. O Squad.io conecta com as ferramentas que voce ja usa, sem voce precisar trocar de contexto.",
+    title: "No fluxo que você já usa",
+    desc: "WhatsApp, Telegram, GitHub, Slack e e-mail. Os super agentes entram no seu fluxo atual sem forçar novo processo, nova rotina ou nova ferramenta de gestão.",
   },
   {
     pill: <PillSecure />,
-    title: "Seguro por padrao",
-    desc: "Sandbox isolado por cliente, permissoes minimas no repo, zero retention nos modelos de IA. LGPD e NDA padrao CruzTech em todos os planos.",
+    title: "Governança por padrão",
+    desc: "Sandbox isolado por cliente, permissões mínimas no repo, zero retention nos modelos e revisão humana antes do merge. Autonomia com controle desde o início.",
   },
   {
     pill: <PillSLA />,
-    title: "SLA garantido",
-    desc: "4 horas no plano Pro, 24h no Growth, 48h no Essencial. Se a gente nao cumprir, voce nao paga o mes. Tao simples quanto.",
+    title: "SLA com accountability",
+    desc: "4 horas no plano Pro, 24h no Growth, 48h no Essencial. A IA acelera a execução, e o time sênior da CruzTech responde pela entrega.",
   },
 ];
 
@@ -138,8 +138,8 @@ export function PowerSection() {
             O poder do Squad.io
           </div>
           <h2 className="text-h2 text-black max-w-[780px] text-balance">
-            Nao e chatbot. E um time de verdade,{" "}
-            <span className="font-display italic text-ink-subtle">com IA por tras.</span>
+            Não é chatbot. É operação autônoma,{" "}
+            <span className="font-display italic text-ink-subtle">com supervisão sênior.</span>
           </h2>
         </div>
 

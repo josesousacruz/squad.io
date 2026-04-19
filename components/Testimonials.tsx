@@ -2,7 +2,7 @@ const TESTIMONIALS = [
   {
     swatch: "from-aurora-peach to-aurora-coral",
     quote:
-      "Em 2h resolveram um bug que meu freelancer travou por uma semana. E tudo pelo WhatsApp, sem ticket, sem reuniao.",
+      "Em 2h resolveram um bug que meu freelancer travou por uma semana. E tudo pelo WhatsApp, sem ticket, sem reunião.",
     name: "Carla Mendes",
     role: "CEO, Loja Verde",
     initials: "CM",
@@ -10,7 +10,7 @@ const TESTIMONIALS = [
   {
     swatch: "from-aurora-lavender to-accent/50",
     quote:
-      "Cancelei um freela de R$ 8k que ia levar um mes. Squad entregou em 3 dias por menos da metade. Com codigo MELHOR.",
+      "Cancelei um freela de R$ 8k que ia levar um mês. Squad entregou em 3 dias por menos da metade. Com código MELHOR.",
     name: "Ricardo Almeida",
     role: "Fundador, Fretella",
     initials: "RA",
@@ -18,7 +18,7 @@ const TESTIMONIALS = [
   {
     swatch: "from-aurora-mint to-aurora-seafoam",
     quote:
-      "Nao sou tecnica. Dependia do meu cunhado dev. Hoje mando audio e recebo resumo em linguagem humana. Mudou minha operacao.",
+      "Não sou técnica. Dependia do meu cunhado dev. Hoje mando áudio e recebo resumo em linguagem humana. Mudou minha operação.",
     name: "Tatiana R.",
     role: "Diretora, Pet Express",
     initials: "TR",
@@ -26,7 +26,7 @@ const TESTIMONIALS = [
   {
     swatch: "from-aurora-sky to-aurora-lavender",
     quote:
-      "A parte de engenheiro senior revisando foi decisiva. Ja tive prejuizo com IA sem supervisao. Aqui tenho paz.",
+      "A camada de engenharia sênior validando foi decisiva. Já tive prejuízo com IA sem supervisão. Aqui tenho paz.",
     name: "Bruno Vieira",
     role: "COO, PayKey",
     initials: "BV",
@@ -34,7 +34,7 @@ const TESTIMONIALS = [
   {
     swatch: "from-aurora-butter to-aurora-peach",
     quote:
-      "Descobrimos 2 vulnerabilidades serias que nosso dev interno nao viu. A analise trimestral paga o plano inteiro.",
+      "Descobrimos 2 vulnerabilidades sérias que nosso dev interno não viu. A análise trimestral paga o plano inteiro.",
     name: "Felipe Dantas",
     role: "CTO, Agro Digital",
     initials: "FD",
@@ -42,7 +42,7 @@ const TESTIMONIALS = [
   {
     swatch: "from-aurora-blush to-aurora-lilac",
     quote:
-      "Velocidade absurda. Mandei 22h da quinta, 8h da sexta o PR estava revisado e pronto pra deploy.",
+      "Velocidade absurda. Mandei 22h da quinta, 8h da sexta o PR estava revisado e pronto para deploy.",
     name: "Ana Paula L.",
     role: "Head de Produto, RepoBrasil",
     initials: "AP",
@@ -57,7 +57,7 @@ export function Testimonials() {
           <div className="text-[13px] font-medium text-ink-muted mb-4">Depoimentos</div>
           <h2 className="text-h2 text-black text-balance">
             O que nossos clientes{" "}
-            <span className="font-display italic text-ink-subtle">dizem por ai.</span>
+            <span className="font-display italic text-ink-subtle">dizem por aí.</span>
           </h2>
         </div>
 

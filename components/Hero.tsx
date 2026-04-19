@@ -32,14 +32,14 @@ export function Hero() {
 
         {/* Headline */}
         <h1 className="text-[48px] leading-[0.98] tracking-[-0.04em] sm:text-hero text-black max-w-[960px] text-balance mb-6 sm:mb-8">
-          Seu time de engenheiros<br />
-          <span className="font-display italic text-ink-subtle">resolvendo bugs no WhatsApp.</span>
+          Seu time de super agentes de IA<br />
+          <span className="font-display italic text-ink-subtle">com engenheiros sêniores por trás.</span>
         </h1>
 
         {/* Subheadline */}
-        <p className="text-[16px] sm:text-[19px] leading-[1.5] text-ink-muted max-w-[560px] mb-8 sm:mb-10 text-balance">
-          Engenheiros de software <strong className="text-black font-semibold">seniores + IA</strong> entregando
-          features, correcoes e deploys em horas. Voce so manda mensagem.
+        <p className="text-[16px] sm:text-[19px] leading-[1.5] text-ink-muted max-w-[680px] mb-8 sm:mb-10 text-balance">
+          Engenheiros de Software + <strong className="text-black font-semibold">Agentes de IA</strong>{" "}
+          executando tarefas, correções e deploys em horas. Você só manda mensagem.
         </p>
 
         {/* Single CTA - Base44 pattern */}
@@ -68,8 +68,8 @@ export function Hero() {
             ))}
           </div>
           <span>
-            <span className="text-black font-semibold">+500 tarefas</span> entregues por
-            engenheiros seniores CruzTech
+            <span className="text-black font-semibold">+500 tarefas</span> executadas com
+            validação sênior CruzTech
           </span>
         </div>
       </div>

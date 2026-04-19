@@ -12,7 +12,7 @@ const CASES = [
   {
     swatch: "swatch-peach",
     company: "Loja Verde",
-    industry: "E-commerce de organicos",
+    industry: "E-commerce de orgânicos",
     icon: Storefront,
     problem: "Checkout derrubando 1 em cada 3 pedidos no Safari iOS.",
     solution: "Bug de compatibilidade Safari corrigido + testes cross-browser.",
@@ -22,9 +22,9 @@ const CASES = [
   {
     swatch: "swatch-sky",
     company: "Fretella",
-    industry: "Startup de logistica",
+    industry: "Startup de logística",
     icon: Package,
-    problem: "Integracao com API dos Correios caindo em 40% dos casos.",
+    problem: "Integração com API dos Correios caindo em 40% dos casos.",
     solution: "Retry com backoff + cache + dashboard de status em tempo real.",
     stat: { time: "1 dia", saved: "R$ 14.000" },
     reviewer: "Rafael Tavares",
@@ -34,9 +34,9 @@ const CASES = [
     company: "PayKey",
     industry: "Fintech B2B",
     icon: CreditCard,
-    problem: "Relatorio mensal de conciliacao levava 8h manual com erros.",
-    solution: "Automacao completa em Node + export PDF/CSV com auditoria.",
-    stat: { time: "3 dias", saved: "40h/mes" },
+    problem: "Relatório mensal de conciliação levava 8h manual com erros.",
+    solution: "Automação completa em Node + export PDF/CSV com auditoria.",
+    stat: { time: "3 dias", saved: "40h/mês" },
     reviewer: "Juliana Moraes",
   },
 ];
@@ -48,7 +48,7 @@ export function CaseStudies() {
         <div className="mb-14">
           <div className="text-[13px] font-medium text-ink-muted mb-4">Cases reais</div>
           <h2 className="text-h2 text-black max-w-[760px] text-balance">
-            O que a gente ja entregou{" "}
+            O que a gente já entregou{" "}
             <span className="font-display italic text-ink-subtle">este trimestre.</span>
           </h2>
         </div>

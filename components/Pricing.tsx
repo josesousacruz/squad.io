@@ -15,31 +15,31 @@ const PLANS: Plan[] = [
   {
     name: "Essencial",
     price: "497",
-    tagline: "Pra quem so precisa manter o site vivo.",
+    tagline: "Pra quem quer super agentes de IA cuidando do operacional recorrente.",
     features: [
-      "Ate 10 tarefas pequenas / mes",
-      "Bug fix, ajustes, configuracoes",
-      "SLA de 48h uteis",
-      "Revisao por engenheiro senior",
+      "Até 10 tarefas pequenas / mês",
+      "Bug fix, ajustes e configurações",
+      "SLA de 48h úteis",
+      "Validação por engenheiro sênior",
       "Canal WhatsApp dedicado",
       "Cancelamento a qualquer momento",
     ],
-    cta: "Comecar agora",
+    cta: "Começar agora",
   },
   {
     name: "Growth",
     price: "1.497",
-    tagline: "Pra evoluir o produto sem contratar CLT.",
+    tagline: "Pra escalar execução com super agentes sem montar time interno.",
     features: [
-      "Ate 30 tarefas / mes",
-      "Features medias inclusas",
+      "Até 30 tarefas / mês",
+      "Features médias inclusas",
       "Deploy e DevOps inclusos",
-      "SLA de 24h uteis",
-      "Revisao por engenheiro senior",
-      "Reuniao mensal de roadmap",
-      "Analise trimestral de seguranca",
+      "SLA de 24h úteis",
+      "Validação por engenheiro sênior",
+      "Reunião mensal de roadmap",
+      "Análise trimestral de segurança",
     ],
-    cta: "Comecar no WhatsApp",
+    cta: "Começar no WhatsApp",
     highlight: true,
     badge: "Mais popular",
     swatch: "swatch-lavender",
@@ -47,14 +47,14 @@ const PLANS: Plan[] = [
   {
     name: "Pro",
     price: "2.997",
-    tagline: "Pra operacoes que nao podem parar.",
+    tagline: "Pra operações que precisam de autonomia com governança sênior.",
     features: [
       "Volume alto de tarefas",
-      "SLA de 4h uteis",
-      "Engenheiro senior dedicado",
-      "Analise mensal de seguranca",
-      "On-call para urgencias",
-      "Relatorio executivo mensal",
+      "SLA de 4h úteis",
+      "Engenheiro sênior dedicado",
+      "Análise mensal de segurança",
+      "On-call para urgências",
+      "Relatório executivo mensal",
       "Onboarding com arquiteto",
     ],
     cta: "Falar com time comercial",
@@ -66,13 +66,13 @@ export function Pricing() {
     <section id="precos" className="py-28 bg-canvas">
       <div className="max-w-[1240px] mx-auto px-6">
         <div className="mb-14 text-center max-w-[720px] mx-auto">
-          <div className="text-[13px] font-medium text-ink-muted mb-4">Precos</div>
+          <div className="text-[13px] font-medium text-ink-muted mb-4">Preços</div>
           <h2 className="text-h2 text-black text-balance mb-5">
             Planos simples,{" "}
             <span className="font-display italic text-ink-subtle">sem surpresa.</span>
           </h2>
           <p className="text-[16px] text-ink-muted">
-            Todos os planos incluem revisao humana por engenheiro senior e cancelamento quando voce
+            Todos os planos incluem execução com super agentes de IA, validação por engenheiro sênior e cancelamento quando você
             quiser.
           </p>
         </div>
@@ -124,13 +124,14 @@ export function Pricing() {
                         <span className="text-[56px] font-semibold tracking-tight leading-none tabular-nums text-black">
                           {plan.price}
                         </span>
-                        <span className="text-[15px] text-ink-muted">/mes</span>
+                        <span className="text-[15px] text-ink-muted">/mês</span>
                       </div>
                     </div>
 
                     <ul className="space-y-2.5 mb-8 flex-1">
                       {plan.features.map((f) => {
-                        const isSeniorReview = f.toLowerCase().includes("engenheiro senior");
+                        const isSeniorReview =
+                          f.toLowerCase().includes("engenheiro sênior");
                         return (
                           <li key={f} className="flex items-start gap-3 text-[14px] leading-snug">
                             <div

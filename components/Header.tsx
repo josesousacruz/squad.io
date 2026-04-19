@@ -3,7 +3,7 @@ import { Sparkle } from "@phosphor-icons/react/dist/ssr";
 const NAV = [
   { label: "Como funciona", href: "#como-funciona" },
   { label: "Casos", href: "#casos" },
-  { label: "Precos", href: "#precos" },
+  { label: "Preços", href: "#precos" },
   { label: "FAQ", href: "#faq" },
 ];
 

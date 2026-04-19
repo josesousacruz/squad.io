@@ -9,16 +9,16 @@ import {
 const COLS = [
   {
     heading: "Produto",
-    links: ["Como funciona", "Casos de uso", "Precos", "FAQ"],
+    links: ["Como funciona", "Casos de uso", "Preços", "FAQ"],
   },
   {
     heading: "Servicos",
     links: [
       "Bug & hotfix",
       "Novas features",
-      "Integracoes",
+      "Integrações",
       "Deploy & DevOps",
-      "Seguranca",
+      "Segurança",
     ],
   },
   {
@@ -27,7 +27,7 @@ const COLS = [
   },
   {
     heading: "Legal",
-    links: ["Termos", "Privacidade", "LGPD", "NDA padrao"],
+    links: ["Termos", "Privacidade", "LGPD", "NDA padrão"],
   },
 ];
 
@@ -52,7 +52,7 @@ export function Footer() {
               </div>
             </a>
             <p className="text-[14px] text-ink-muted max-w-[300px] leading-relaxed">
-              Engenheiros seniores + IA resolvendo bugs, features e deploys direto no WhatsApp.
+              Super agentes de IA executando bugs, features e deploys com validação de engenheiros sêniores da CruzTech.
             </p>
           </div>
 
@@ -103,7 +103,7 @@ export function Footer() {
           </div>
           <div className="flex items-center gap-2">
             <div className="w-1.5 h-1.5 rounded-full bg-wa" />
-            <span>Portugues (BR)</span>
+            <span>Português (BR)</span>
           </div>
         </div>
       </div>

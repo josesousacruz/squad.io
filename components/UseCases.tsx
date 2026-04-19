@@ -148,7 +148,7 @@ function MiniMockupDeploy() {
       <div className="absolute top-3 right-4 w-[40%] bg-white rounded-xl shadow-card p-2.5 rotate-[4deg] z-10">
         <div className="flex items-center gap-1.5 mb-1">
           <div className="w-1.5 h-1.5 rounded-full bg-wa animate-pulse" />
-          <span className="text-[9px] font-semibold text-black">Producao</span>
+          <span className="text-[9px] font-semibold text-black">Produção</span>
         </div>
         <div className="text-[9px] text-ink-muted">v2.4.1 &middot; OK</div>
       </div>
@@ -237,8 +237,8 @@ const CASES: Case[] = [
     category: "Bug & hotfix",
     icon: Bug,
     mockup: <MiniMockupBug />,
-    title: "Checkout quebrado? A gente acha o bug antes do almoco.",
-    desc: "Voce manda o print do erro, o Squad reproduz, identifica a causa e abre o PR com fix e teste.",
+    title: "Checkout quebrado? A gente acha o bug antes do almoço.",
+    desc: "Você manda o print do erro, o Squad reproduz, identifica a causa e abre o PR com fix e teste.",
     time: "~2h",
   },
   {
@@ -246,17 +246,17 @@ const CASES: Case[] = [
     category: "Nova feature",
     icon: Lightning,
     mockup: <MiniMockupFeature />,
-    title: "Features inteiras em dias, nao semanas.",
-    desc: "Cupons, filtros, paginas novas, integracao com provedores. Escopo fechado, codigo testado, revisado por senior.",
+    title: "Features inteiras em dias, não semanas.",
+    desc: "Cupons, filtros, páginas novas, integração com provedores. Escopo fechado, código testado, revisado por sênior.",
     time: "1-3 dias",
   },
   {
     swatch: "swatch-sky",
-    category: "Integracoes & APIs",
+    category: "Integrações & APIs",
     icon: PlugsConnected,
     mockup: <MiniMockupIntegration />,
     title: "Conectamos o que precisa estar conectado.",
-    desc: "Stripe, Pagar.me, WhatsApp Business, ERPs, webhooks. Fazemos a integracao com retry, cache e monitoramento.",
+    desc: "Stripe, Pagar.me, WhatsApp Business, ERPs, webhooks. Fazemos a integração com retry, cache e monitoramento.",
     time: "1-2 dias",
   },
   {
@@ -264,26 +264,26 @@ const CASES: Case[] = [
     category: "Deploy & DevOps",
     icon: Rocket,
     mockup: <MiniMockupDeploy />,
-    title: "Subir pra producao sem travar seu coracao.",
-    desc: "CI/CD, staging, rollback automatico, monitoramento de logs. Voce dorme, a gente vigia o deploy.",
+    title: "Subir para produção sem travar seu coração.",
+    desc: "CI/CD, staging, rollback automático, monitoramento de logs. Você dorme, a gente vigia o deploy.",
     time: "~4h",
   },
   {
     swatch: "swatch-butter",
-    category: "Analise de seguranca",
+    category: "Análise de segurança",
     icon: ShieldCheck,
     mockup: <MiniMockupSecurity />,
-    title: "Seu sistema auditado por engenheiro senior.",
-    desc: "Varredura de vulnerabilidades, LGPD, permissoes, secrets expostos. Relatorio executivo + patch de correcoes.",
+    title: "Seu sistema auditado com validação sênior.",
+    desc: "Varredura de vulnerabilidades, LGPD, permissões, secrets expostos. Relatório executivo + patch de correções.",
     time: "1 dia",
   },
   {
     swatch: "swatch-blush",
-    category: "Refactor & migracao",
+    category: "Refactor & migração",
     icon: ArrowsClockwise,
     mockup: <MiniMockupRefactor />,
-    title: "Debito tecnico vira linhas limpas.",
-    desc: "Migracao de versao, refactor de arquitetura, limpeza de codigo legado. Mudamos sem quebrar o que funciona.",
+    title: "Débito técnico vira linhas limpas.",
+    desc: "Migração de versão, refactor de arquitetura, limpeza de código legado. Mudamos sem quebrar o que funciona.",
     time: "Sob escopo",
   },
 ];
@@ -301,7 +301,7 @@ export function UseCases() {
             pro seu Squad.
           </h2>
           <p className="text-[15px] text-ink-muted max-w-[340px]">
-            Tudo que um time de TI sobre demanda faz, em um so lugar, no WhatsApp.
+            Tudo que um time de TI sob demanda faz, em um só lugar, no WhatsApp.
           </p>
         </div>
       </div>

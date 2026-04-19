@@ -16,9 +16,9 @@ const instrument = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "Squad.io by CruzTech | Time de TI no WhatsApp",
+  title: "Squad.io by CruzTech | Super Agentes de IA no WhatsApp",
   description:
-    "Engenheiros de software seniores + IA resolvendo bugs, features, deploys e seguranca direto no WhatsApp. Cada entrega revisada por um humano.",
+    "Super agentes de IA executam bugs, features, deploys e automações direto no WhatsApp. Cada entrega é validada por engenheiros sêniores da CruzTech.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

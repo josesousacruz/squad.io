@@ -40,17 +40,16 @@ export function CtaFinal() {
         <div className="relative z-10 px-6 sm:px-16 py-28 text-center">
           <div className="concept-pill bg-white/90 mx-auto mb-10">
             <Sparkle weight="fill" size={11} className="text-accent" />
-            <span className="text-ink-subtle">Diagnostico gratuito em ate 10min</span>
+            <span className="text-ink-subtle">Diagnóstico autônomo em até 10min</span>
           </div>
 
           <h2 className="text-[56px] md:text-[80px] font-semibold tracking-[-0.035em] leading-[1.02] text-black max-w-[900px] mx-auto mb-7 text-balance">
-            Seu proximo bug pode estar{" "}
-            <span className="font-display italic">resolvido hoje.</span>
+            Seu próximo PR pode estar{" "}
+            <span className="font-display italic">pronto hoje.</span>
           </h2>
 
           <p className="text-[18px] text-ink-subtle max-w-[580px] mx-auto mb-12 text-balance leading-relaxed">
-            Fale com o time de engenheiros seniores da CruzTech agora. Sem compromisso, sem
-            formulario, direto no WhatsApp.
+            Fale com a CruzTech e veja seus super agentes de IA entrarem em operação com supervisão sênior. Sem compromisso, sem formulário, direto no WhatsApp.
           </p>
 
           <a

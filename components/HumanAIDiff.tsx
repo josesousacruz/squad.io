@@ -17,29 +17,28 @@ function HumanSide() {
       <div className="relative z-10 p-10 h-full flex flex-col">
         <div className="concept-pill bg-white/90 w-fit mb-8">
           <UserCheck weight="fill" size={11} className="text-accent-600" />
-          <span className="text-ink-subtle">Lado humano</span>
+          <span className="text-ink-subtle">Camada sênior</span>
         </div>
 
         <h3 className="text-[32px] font-semibold leading-tight text-black tracking-tight mb-4 text-balance">
-          Engenheiros seniores <span className="font-display italic">assinam cada entrega.</span>
+          Engenheiros sêniores <span className="font-display italic">validam cada entrega.</span>
         </h3>
         <p className="text-[15px] text-ink-subtle leading-relaxed mb-8 max-w-[380px]">
-          Um engenheiro CruzTech com +8 anos de experiencia revisa cada linha antes de chegar em voce.
-          Arquitetura, seguranca, performance.
+          Um engenheiro sênior da CruzTech revisa o que os super agentes executaram antes de qualquer PR chegar em você. Arquitetura, segurança, performance e risco de produção.
         </p>
 
         {/* Checklist card */}
         <div className="mt-auto bg-white/80 backdrop-blur-sm rounded-2xl p-5 shadow-soft">
           <div className="flex items-center gap-2 text-[12px] font-semibold text-black mb-3">
             <GitPullRequest size={12} className="text-accent-600" />
-            Checklist de revisao
+            Checklist de validação
           </div>
           <div className="space-y-2">
             {[
-              "Seguranca (SQLi, XSS, auth)",
+              "Segurança (SQLi, XSS, auth)",
               "Performance e edge cases",
-              "Testes cobrindo o cenario",
-              "Padrao do seu codebase",
+              "Testes cobrindo o cenário",
+              "Padrão do seu codebase",
             ].map((item) => (
               <div key={item} className="flex items-center gap-2 text-[13px] text-ink-subtle">
                 <CheckCircle weight="fill" size={13} className="text-wa shrink-0" />
@@ -83,15 +82,14 @@ function AISide() {
       <div className="relative z-10 p-10 h-full flex flex-col">
         <div className="concept-pill bg-white/90 w-fit mb-8">
           <Brain weight="fill" size={11} className="text-wa-700" />
-          <span className="text-ink-subtle">Lado IA</span>
+          <span className="text-ink-subtle">Camada autônoma</span>
         </div>
 
         <h3 className="text-[32px] font-semibold leading-tight text-black tracking-tight mb-4 text-balance">
-          Agente autonomo <span className="font-display italic">em minutos, nao dias.</span>
+          Super agentes operam <span className="font-display italic">em minutos, não dias.</span>
         </h3>
         <p className="text-[15px] text-ink-subtle leading-relaxed mb-8 max-w-[380px]">
-          Modelos de ponta leem todo o repositorio, sugerem solucoes, rodam testes e abrem o PR
-          automaticamente.
+          Super agentes de IA leem o repositório, investigam a causa raiz, implementam a solução, rodam testes e preparam o PR sem depender de handoff operacional.
         </p>
 
         {/* Terminal card */}
@@ -103,7 +101,7 @@ function AISide() {
               <div className="w-1.5 h-1.5 rounded-full bg-green-400" />
             </div>
             <Lightning weight="fill" size={10} className="text-yellow-400 ml-2" />
-            <span className="text-white/60">squad.io agent &middot; live</span>
+            <span className="text-white/60">squad.io super agents &middot; live</span>
           </div>
           <div className="space-y-1 text-[11px]">
             <div className="text-white/50">&gt; analisando /checkout/*</div>
@@ -114,7 +112,7 @@ function AISide() {
             <div className="text-wa">
               &gt; <span className="text-white">14/14 passaram</span> em 1.8s
             </div>
-            <div className="text-aurora-lavender">&gt; aguardando revisao humana</div>
+            <div className="text-aurora-lavender">&gt; aguardando validação sênior</div>
           </div>
         </div>
 
@@ -135,8 +133,8 @@ export function HumanAIDiff() {
         <div className="mb-14">
           <div className="text-[13px] font-medium text-ink-muted mb-4">Como entregamos</div>
           <h2 className="text-h2 text-black max-w-[720px] text-balance">
-            Duas forcas. Um unico resultado:{" "}
-            <span className="font-display italic text-ink-subtle">codigo que funciona.</span>
+            Autonomia para executar.{" "}
+            <span className="font-display italic text-ink-subtle">Senioridade para assinar.</span>
           </h2>
         </div>
 

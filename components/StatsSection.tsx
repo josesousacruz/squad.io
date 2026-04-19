@@ -1,8 +1,8 @@
 const STATS = [
   { value: "500", suffix: "+", label: "tarefas entregues" },
   { value: "R$ 1.2", suffix: "M", label: "economizados pelos clientes" },
-  { value: "< 4", suffix: "h", label: "tempo medio de resposta" },
-  { value: "98", suffix: "%", label: "de satisfacao" },
+  { value: "< 4", suffix: "h", label: "tempo médio de resposta" },
+  { value: "98", suffix: "%", label: "de satisfação" },
 ];
 
 export function StatsSection() {
@@ -30,10 +30,10 @@ export function StatsSection() {
 
       <div className="relative z-10 max-w-[1240px] mx-auto px-6">
         <div className="mb-20">
-          <div className="text-[13px] font-medium text-ink-muted mb-4">Numeros que importam</div>
+          <div className="text-[13px] font-medium text-ink-muted mb-4">Números que importam</div>
           <h2 className="text-h2 text-black max-w-[720px] text-balance">
             Resultado em escala,{" "}
-            <span className="font-display italic text-ink-subtle">revisao em detalhe.</span>
+            <span className="font-display italic text-ink-subtle">revisão em detalhe.</span>
           </h2>
         </div>
 
