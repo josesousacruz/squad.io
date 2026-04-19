@@ -3,7 +3,7 @@ import { HeroMockup } from "./HeroMockup";
 
 export function Hero() {
   return (
-    <section className="relative w-full overflow-hidden pt-28 pb-20 bg-canvas">
+    <section className="relative w-full overflow-hidden pt-24 sm:pt-28 pb-14 sm:pb-20 bg-canvas">
       {/* Watercolor background */}
       <div className="watercolor-hero" aria-hidden />
       <div className="watercolor-hero-extra" aria-hidden />
@@ -16,7 +16,7 @@ export function Hero() {
 
       <div className="relative z-10 max-w-[1200px] mx-auto px-6 flex flex-col items-center text-center">
         {/* Brand mark */}
-        <div className="mb-10 flex items-center gap-2.5">
+        <div className="mb-8 sm:mb-10 flex items-center gap-2.5">
           <div className="relative w-6 h-6">
             <div className="absolute inset-0 rounded-full bg-gradient-to-br from-accent via-aurora-lavender to-aurora-peach opacity-80 blur-[2px]" />
             <div className="absolute inset-[3px] rounded-full bg-black flex items-center justify-center">
@@ -31,13 +31,13 @@ export function Hero() {
         </div>
 
         {/* Headline */}
-        <h1 className="text-hero text-black max-w-[960px] text-balance mb-8">
+        <h1 className="text-[48px] leading-[0.98] tracking-[-0.04em] sm:text-hero text-black max-w-[960px] text-balance mb-6 sm:mb-8">
           Seu time de engenheiros<br />
           <span className="font-display italic text-ink-subtle">resolvendo bugs no WhatsApp.</span>
         </h1>
 
         {/* Subheadline */}
-        <p className="text-[19px] leading-[1.5] text-ink-muted max-w-[560px] mb-10 text-balance">
+        <p className="text-[16px] sm:text-[19px] leading-[1.5] text-ink-muted max-w-[560px] mb-8 sm:mb-10 text-balance">
           Engenheiros de software <strong className="text-black font-semibold">seniores + IA</strong> entregando
           features, correcoes e deploys em horas. Voce so manda mensagem.
         </p>
@@ -53,7 +53,7 @@ export function Hero() {
         </a>
 
         {/* Trust signal */}
-        <div className="mt-8 flex items-center gap-3 text-[13px] text-ink-muted">
+        <div className="mt-7 sm:mt-8 flex flex-wrap items-center justify-center gap-3 text-[13px] text-ink-muted">
           <div className="flex -space-x-2">
             {[
               "from-aurora-peach to-aurora-coral",
@@ -75,7 +75,7 @@ export function Hero() {
       </div>
 
       {/* Mockup floating below hero */}
-      <div className="relative z-10 max-w-[1200px] mx-auto px-6 mt-20">
+      <div className="relative z-10 max-w-[1200px] mx-auto px-4 sm:px-6 mt-12 sm:mt-20">
         <HeroMockup />
       </div>
     </section>

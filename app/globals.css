@@ -156,6 +156,33 @@
   .snap-scroll > * {
     scroll-snap-align: start;
   }
+
+  .mobile-scroll-fade {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 22px;
+    pointer-events: none;
+    z-index: 10;
+  }
+  .mobile-scroll-fade.left {
+    left: 0;
+    background: linear-gradient(to right, rgba(247, 246, 242, 0.72), rgba(247, 246, 242, 0));
+  }
+  .mobile-scroll-fade.right {
+    right: 0;
+    background: linear-gradient(to left, rgba(247, 246, 242, 0.72), rgba(247, 246, 242, 0));
+  }
+
+  .marquee-track {
+    width: max-content;
+    animation: marqueeX 42s linear infinite;
+    will-change: transform;
+  }
+
+  .marquee-track:hover {
+    animation-play-state: paused;
+  }
 }
 
 @layer utilities {
@@ -185,6 +212,11 @@
   to { opacity: 1; transform: translateY(0); }
 }
 .animate-fade-up { animation: fadeInUp 0.8s ease-out both; }
+
+@keyframes marqueeX {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-50% - 0.625rem)); }
+}
 
 /* Scrollbars */
 ::-webkit-scrollbar { width: 10px; height: 10px; }

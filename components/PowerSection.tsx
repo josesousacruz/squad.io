@@ -145,9 +145,11 @@ export function PowerSection() {
 
         {/* Grid with soft dividers */}
         <div className="relative">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-14 gap-x-12">
-            {FEATURES.map((feat, idx) => (
-              <div key={feat.title} className="relative">
+          <div className="mobile-scroll-fade left md:hidden" aria-hidden />
+          <div className="mobile-scroll-fade right md:hidden" aria-hidden />
+          <div className="grid grid-flow-col auto-cols-[minmax(260px,82vw)] grid-rows-2 gap-x-5 gap-y-10 overflow-x-auto pb-4 snap-scroll md:grid-flow-row md:auto-cols-auto md:grid-cols-2 md:grid-rows-none md:overflow-visible lg:grid-cols-3 md:gap-y-14 md:gap-x-12">
+            {FEATURES.map((feat) => (
+              <div key={feat.title} className="relative min-w-0">
                 {/* Top hair divider (always visible on each card) */}
                 <div className="hair-divider mb-8" />
 

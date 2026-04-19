@@ -306,55 +306,57 @@ export function UseCases() {
         </div>
       </div>
 
-      {/* Horizontal scroll */}
-      <div className="snap-scroll overflow-x-auto overflow-y-hidden pb-8">
-        <div className="flex gap-6 px-6 lg:px-[max(1.5rem,calc((100vw-1240px)/2))]">
-          {CASES.map((c) => {
-            const Icon = c.icon;
-            return (
-              <article
-                key={c.title}
-                className="shrink-0 w-[380px] group cursor-pointer"
-              >
-                {/* Watercolor card with mockup */}
-                <div
-                  className={`${c.swatch} relative rounded-[28px] h-[280px] overflow-hidden mb-6 transition-transform duration-500 group-hover:scale-[1.02] group-hover:shadow-float`}
+      <div className="relative">
+        <div className="mobile-scroll-fade left" aria-hidden />
+        <div className="mobile-scroll-fade right" aria-hidden />
+        <div className="overflow-hidden pb-8">
+          <div className="marquee-track flex gap-5 md:gap-6 pl-6 pr-1 md:pl-[max(1.5rem,calc((100vw-1240px)/2))]">
+            {[...CASES, ...CASES].map((c, idx) => {
+              const Icon = c.icon;
+              const isClone = idx >= CASES.length;
+              return (
+                <article
+                  key={`${c.title}-${idx}`}
+                  className="shrink-0 w-[86vw] max-w-[380px] md:w-[380px] group cursor-pointer"
+                  aria-hidden={isClone}
                 >
-                  {/* Subtle inner glow */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/40 via-transparent to-black/5 pointer-events-none" />
+                  {/* Watercolor card with mockup */}
+                  <div
+                    className={`${c.swatch} relative rounded-[28px] h-[280px] overflow-hidden mb-6 transition-transform duration-500 group-hover:scale-[1.02] group-hover:shadow-float`}
+                  >
+                    {/* Subtle inner glow */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/40 via-transparent to-black/5 pointer-events-none" />
 
-                  {/* Mockup slot */}
-                  <div className="absolute inset-8">{c.mockup}</div>
+                    {/* Mockup slot */}
+                    <div className="absolute inset-8">{c.mockup}</div>
 
-                  {/* Category pill */}
-                  <div className="absolute top-5 left-5 concept-pill bg-white/90 backdrop-blur-sm">
-                    <Icon weight="fill" size={11} className="text-ink-subtle" />
-                    <span className="text-ink-subtle">{c.category}</span>
+                    {/* Category pill */}
+                    <div className="absolute top-5 left-5 concept-pill bg-white/90 backdrop-blur-sm">
+                      <Icon weight="fill" size={11} className="text-ink-subtle" />
+                      <span className="text-ink-subtle">{c.category}</span>
+                    </div>
+
+                    {/* WhatsApp badge */}
+                    <div className="absolute bottom-5 right-5 w-9 h-9 rounded-full bg-white shadow-float flex items-center justify-center">
+                      <WhatsappLogo weight="fill" size={16} className="text-wa" />
+                    </div>
                   </div>
 
-                  {/* WhatsApp badge */}
-                  <div className="absolute bottom-5 right-5 w-9 h-9 rounded-full bg-white shadow-float flex items-center justify-center">
-                    <WhatsappLogo weight="fill" size={16} className="text-wa" />
+                  {/* Card body */}
+                  <div className="px-1">
+                    <div className="flex items-center gap-2 text-[12px] text-ink-muted mb-3">
+                      <Clock weight="fill" size={11} className="text-wa" />
+                      <span className="font-medium">Entregue em {c.time}</span>
+                    </div>
+                    <h3 className="text-[20px] font-semibold text-black leading-[1.2] mb-3 tracking-tight text-balance">
+                      {c.title}
+                    </h3>
+                    <p className="text-[14px] text-ink-muted leading-[1.6]">{c.desc}</p>
                   </div>
-                </div>
-
-                {/* Card body */}
-                <div className="px-1">
-                  <div className="flex items-center gap-2 text-[12px] text-ink-muted mb-3">
-                    <Clock weight="fill" size={11} className="text-wa" />
-                    <span className="font-medium">Entregue em {c.time}</span>
-                  </div>
-                  <h3 className="text-[20px] font-semibold text-black leading-[1.2] mb-3 tracking-tight text-balance">
-                    {c.title}
-                  </h3>
-                  <p className="text-[14px] text-ink-muted leading-[1.6]">{c.desc}</p>
-                </div>
-              </article>
-            );
-          })}
-
-          {/* Final spacer for natural snap end */}
-          <div className="shrink-0 w-6" aria-hidden />
+                </article>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>

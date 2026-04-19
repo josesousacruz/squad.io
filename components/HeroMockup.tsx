@@ -37,7 +37,7 @@ export function HeroMockup() {
           <div className="w-14" />
         </div>
 
-        <div className="grid grid-cols-12 h-[560px]">
+        <div className="grid grid-cols-12 h-[440px] sm:h-[500px] lg:h-[560px]">
           {/* Left: tarefas sidebar */}
           <aside className="col-span-3 bg-canvas border-r border-black/5 p-4 hidden md:block">
             <div className="flex items-center justify-between mb-4">
